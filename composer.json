@@ -1,0 +1,37 @@
+{
+    "name": "orc/oily-bird",
+    "description": "A wrapper module that supports caching, websocket and database functionalities",
+	"keywords": ["OilyBird", "wrapper", "cache", "Redis", "websocket", "ZMQ", "WAMP", "PubSub", "database", "PDO", "SQL"],
+	"autoload": {
+        "psr-4": {
+			"OilyBird\\": "src",
+			"OilyBird\\Conf\\": "src/conf",
+			"OilyBird\\Common\\": "src/common",
+            "OilyBird\\WampMgr\\": "src/wamp_manager",
+            "OilyBird\\WampMgr\\Component\\": "src/wamp_manager/component",
+            "OilyBird\\WampMgr\\Constants\\": "src/wamp_manager/constants",
+            "OilyBird\\WampMgr\\Handler\\": "src/wamp_manager/handler",
+			"OilyBird\\CacheMgr\\": "src/cache_manager",
+			"OilyBird\\CacheMgr\\Component\\": "src/cache_manager/component",
+			"OilyBird\\CacheMgr\\Constants\\": "src/cache_manager/constants",
+			"OilyBird\\DatabaseMgr\\": "src/database_manager",
+			"OilyBird\\DatabaseMgr\\Component\\": "src/database_manager/component",
+			"OilyBird\\DatabaseMgr\\Constants\\": "src/database_manager/constants"
+        }
+    },
+    "require": {
+    	"php": ">=5.4.0",
+        "predis/predis-async": "dev-master",
+		"cboden/ratchet": "0.3.*",
+		"ext-zmq": "*",
+		"react/zmq": "0.4.*@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oliver Ryan Chong",
+            "email": "oliver.chong55@gmail.com"
+        }
+    ],
+    "minimum-stability": "alpha"
+}
