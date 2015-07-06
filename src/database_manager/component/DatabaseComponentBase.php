@@ -161,7 +161,7 @@ abstract class DatabaseComponentBase
 	 */
 	public function insert( DatabaseRecord $cDbRecord )
 	{
-		$aFields = $cDbRecord->getFields();
+		$aFields = $cDbRecord->getAllFields();
 
 		if ( !empty( $aFields ) )
 		{
@@ -283,7 +283,7 @@ abstract class DatabaseComponentBase
 			//create the handle to the prepared statement
 			$this->m_cStmt = $this->m_cDbHandle->prepare( $szPreparedStmt );
 
-			var_dump( "executeStatement =====", $this->m_cStmt, $aFields );
+			//var_dump( "executeStatement =====", $this->m_cStmt, $aFields );
 
 			if ( !empty( $aFields ) )
 			{
@@ -322,7 +322,7 @@ abstract class DatabaseComponentBase
 				$this->m_cStmt->execute();
 			}
 
-			var_dump( "executeStatement FORMATTED =====", $this->m_cStmt, $aFields );
+			//var_dump( "executeStatement FORMATTED =====", $this->m_cStmt, $aFields );
 
 			return $this->m_cStmt->rowCount();
 		}
