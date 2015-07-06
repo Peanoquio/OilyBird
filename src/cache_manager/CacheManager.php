@@ -82,7 +82,9 @@ class CacheManager extends Singleton
 	 */
 	public static function get( $szKey, $nType = null )
 	{
-		return unserialize( self::getInstance()->m_cCache->get( $szKey, $nType ) );
+		$value = self::getInstance()->m_cCache->get( $szKey, $nType );
+		$value = is_string( $value ) ? unserialize( $value ) : $value;
+		return $value;
 	}
 
 
