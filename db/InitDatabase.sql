@@ -34,8 +34,8 @@ CREATE TABLE IF NOT EXISTS `testing`.`general`
 	`Attack` INT UNSIGNED NOT NULL DEFAULT 0,
 	`Defense` INT UNSIGNED NOT NULL DEFAULT 0,
 	`PlayerId` INT UNSIGNED,
-	`KingdomId` INT UNSIGNED,	
+	`KingdomId` INT UNSIGNED,
 	PRIMARY KEY ( `Id` ),
-	CONSTRAINT `fk_GeneralPlayerId` FOREIGN KEY ( `PlayerId` ) REFERENCES Player( `Id` ) ON DELETE CASCADE,
-	CONSTRAINT `fk_GeneralKingdomId` FOREIGN KEY ( `KingdomId` ) REFERENCES Kingdom( `Id` ) ON DELETE CASCADE
+	CONSTRAINT `fk_GeneralPlayerId` FOREIGN KEY ( `PlayerId` ) REFERENCES `testing`.`player`( `Id` ) ON DELETE CASCADE,
+	CONSTRAINT `fk_GeneralKingdomId` FOREIGN KEY ( `KingdomId` ) REFERENCES `testing`.`kingdom`( `Id` ) ON DELETE CASCADE
 ) ENGINE = `InnoDB`;
