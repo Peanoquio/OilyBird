@@ -30,7 +30,7 @@ class PlayerRecord extends DatabaseRecord
 {
 	public function __construct()
 	{
-		parent::__construct( "Player" );
+		parent::__construct( "player" );
 	}
 
 
@@ -117,8 +117,8 @@ function ProcessTransaction()
 		//$cPlayerRecord->setName( "player4" );
 		$cPlayerRecord->setField( "Age", 5 );
 
-		//$nAffectedRows = DatabaseManager::insert( $cPlayerRecord );
-		//var_dump( "INSERT nAffectedRows-----", $nAffectedRows );
+		$nAffectedRows = DatabaseManager::insert( $cPlayerRecord );
+		var_dump( "INSERT nAffectedRows-----", $nAffectedRows );
 
 
 		echo "<span style='color:green;'>";
@@ -180,16 +180,16 @@ function ProcessTransaction()
 
 		//CUSTOM QUERY
 		$aQueryResult = DatabaseManager::customQuery( array( "Name_0"=>"player3", "Age_0"=>5, "Age_1"=>5555 ),
-				"SELECT * FROM Player WHERE Name = :Name_0 AND Age IN ( :Age_0, :Age_1 ) ORDER BY Name ASC, Age DESC" );
+				"SELECT * FROM player WHERE Name = :Name_0 AND Age IN ( :Age_0, :Age_1 ) ORDER BY Name ASC, Age DESC" );
 		var_dump( "CUSTOM SELECT -----", $aQueryResult );
 
 		//LIKE condition
 		$aQueryResult = DatabaseManager::customQuery( array( "Name_0"=>"player%", "Age_0"=>5, "Age_1"=>5555 ),
-				"SELECT * FROM Player WHERE Name LIKE :Name_0 AND Age IN ( :Age_0, :Age_1 ) ORDER BY Name ASC, Age DESC" );
+				"SELECT * FROM player WHERE Name LIKE :Name_0 AND Age IN ( :Age_0, :Age_1 ) ORDER BY Name ASC, Age DESC" );
 		var_dump( "CUSTOM SELECT USING LIKE-----", $aQueryResult );
 
 		$nAffectedRows = DatabaseManager::customQuery( array( "Name"=>"player3", "Age"=>5, "Age_0"=>555 ),
-				"UPDATE Player SET Name = :Name, Age = :Age WHERE Age = :Age_0" );
+				"UPDATE player SET Name = :Name, Age = :Age WHERE Age = :Age_0" );
 		var_dump( "CUSTOM UPDATE -----", $nAffectedRows );
 
 
