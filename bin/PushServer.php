@@ -79,7 +79,8 @@ WampManager::onMessage( array( $cWampHandler, "broadcast" ), $aChannels );
 // Set up our WebSocket server for clients wanting real-time updates
 $webSocket = new React\Socket\Server( $loop );
 // Binding to 0.0.0.0 means remotes can connect
-$webSocket->listen( Config::getWampPubSubPort(), '0.0.0.0' );
+//$webSocket->listen( Config::getWampPubSubPort(), '0.0.0.0' );
+$webSocket->listen( Config::getWampPubSubPort(), Config::getWampPubSubIP() );
 
 
 //create the webserver that supports websockets using the WAMP subprotocol
