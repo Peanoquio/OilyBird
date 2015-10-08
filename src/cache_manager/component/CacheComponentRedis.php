@@ -295,10 +295,10 @@ class CacheComponentRedis extends CacheBase
 				return $this->m_cCacheObj->hgetall( $szKey );
 				break;
 			case CacheDataType::LISTS:
-				return $this->lrange( $szKey, 0, -1 );
+				return $this->m_cCacheObj->lrange( $szKey, 0, -1 );
 				break;
 			case CacheDataType::SORTED_SET:
-				return $this->zrange( $szKey, 0, -1, array( "withscores" => true ) );
+				return $this->m_cCacheObj->zrange( $szKey, 0, -1, array( "withscores" => true ) );
 				break;
 		}
 	}
