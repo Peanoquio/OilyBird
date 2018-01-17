@@ -15,7 +15,7 @@ A wrapper module that supports caching, websocket and database functionalities
 * [License](#license)
 
 ## Technical Overview
-####*What components does the OilyBird wrapper utilize?*
+#### *What components does the OilyBird wrapper utilize?*
 (take note that all the PHP dependencies can be found in the composer.json file)
 
 1. **React (PHP)**  
@@ -52,7 +52,7 @@ WAMP runs on top of WebSocket and adds asynchronous Remote Procedure Calls and P
 http://autobahn.ws/js/
 
 ## Installation
-####*How to setup OilyBird?*
+#### *How to setup OilyBird?*
 
 1. **Download and install XAMPP**  
 XAMPP is an easy to install Apache distribution containing MySQL, PHP, and Perl.  
@@ -76,7 +76,7 @@ After you install composer, go to the directory of the `composer.json` and type 
 `composer install`  
 or alternatively--on Windows--you can right-click on the composer.json and select `Composer Install` from the context menu.  
 
-####*Setting Up the Cache*
+#### *Setting Up the Cache*
 
 For the cache, we will be needing Redis.  
 The installers can be found here:
@@ -93,7 +93,7 @@ Include this in the require section of your `composer.json`:
 For more information about this binding, you can check this link:  
 https://github.com/reactphp/zmq
 
-####*Setting Up Websockets*
+#### *Setting Up Websockets*
 
 Websockets are supported by Ratchet PHP from the server-side.   
 As for the WAMP sub-protocol having the publish/subscribe functionality, it can be supported by either Predis Pub/Sub or ZMQ.  
@@ -132,12 +132,12 @@ Include this in the require section of your `composer.json`:
 For more information about binding React PHP to ZMQ, you can check this link:  
 https://github.com/reactphp/zmq
 
-##Usage
-Coming soon...
+## Usage
+*Coming soon...*
 
-##Contributing
+## Contributing
 Your contribution to this project is most certainly welcomed.
 Feel free to fork this project and make it awesome.
 
-##License
+## License
 This is an open source project under the MIT license.  For more information, please refer to [LICENSE.md](LICENSE.md)
