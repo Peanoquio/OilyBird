@@ -15,3 +15,6 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
+
+# ignore the files found in this directory so it won't count towards the language that makes up this repository
+js/lib/* linguist-vendored
