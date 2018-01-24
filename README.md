@@ -133,7 +133,7 @@ For more information about binding React PHP to ZMQ, you can check this link:
 https://github.com/reactphp/zmq
 
 ## Usage
-*Coming soon...*
+You can refer to the files found in the `examples` directory to get an idea on how to use this.
 
 ## Contributing
 Your contribution to this project is most certainly welcomed.
