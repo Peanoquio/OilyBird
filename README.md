@@ -133,7 +133,8 @@ For more information about binding React PHP to ZMQ, you can check this link:
 https://github.com/reactphp/zmq
 
 ## Usage
-You can refer to the files found in the `examples` directory to get an idea on how to use this.
+You can refer to the files found in the `examples` directory to get an idea on how to use this. <br />
+Run the SQL script `db/InitDatabase.sql` so you can also test the database access. <br />
 
 ## Contributing
 Your contribution to this project is most certainly welcomed.
